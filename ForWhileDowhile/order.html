@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>order summary</title>
+    <style>
+        table {
+            width: 300px;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #333;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="table">
+        <tr>
+            <th>S.no</th>
+            <th>product</th>
+            <th>quantity</th>
+            <th>price</th>
+            <th>total</th>
+        </tr>
+    </table>
+    <script>
+        let tables = document.getElementById("table");
+        let array = [{ sno: 1, product: "watch", quantity: 3, price: 3000 },
+        { sno: 2, product: "vivo", quantity: 2, price: 45000 },
+        { sno: 3, product: "iphone", quantity: 1, price: 100000 },
+        { sno: 4, product: "samsung", quantity: 3, price: 15000 },]
+        for (i = 0; i < array.length; i++) {
+            let total = array[i].quantity * array[i].price
+            tables.innerHTML += `<tr>
+                <td>${array[i].sno}</td>
+                <td>${array[i].product}</td>
+                <td>${array[i].quantity}</td>
+                <td>${array[i].price}</td>
+                <td>${total}</td></tr>`
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="card"></div>
+    <script>
+        let pro = document.getElementById("card");
+        let products = [
+
+            { name: "Shirt", price: 500, },
+            { name: "Watch", price: 1200, },
+            { name: "iphone", price: 10000 },
+            { name: "lamp", price: 2000 }
+        ]
+        let max = Math.max(...products.map(p => p.price));
+
+        for (let i = 0; i < products.length; i++) {
+
+            if (max == products[i].price)
+                pro.innerHTML += ` <p><strong>Product with highest price:</strong> ${products[i].name}</p>`
+
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="stock"></div>
+    <script>
+        let h = document.getElementById("stock");
+        let array = [
+
+            { name: "Keyboard", stock: 3 },
+            { name: "Mouse", stock: 2 },
+            { name: "Charger", stock: 0 },
+            { name: "laptop", stock: 3 }
+        ]
+        let i = 0;
+        while (i < array.length && array[i].stock > 0) {
+            h.innerHTML += ` ${array[i].name }`
+            i++;
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stock Simulation</title>
+</head>
+<body>
+  <div id="result"></div>
+
+  <script>
+    let stock = 5; // initial stock
+    let addedCount = 0;
+
+    do {
+      addedCount++;
+      stock--;
+    } while (stock > 0);
+
+    document.getElementById("result").innerHTML = 
+      `Product was added ${addedCount} times until stock reached 0.`;
+  </script>
+</body>
+</html>

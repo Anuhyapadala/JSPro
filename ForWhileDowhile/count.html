@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Countdown</title>
+  <style>
+    #countdown {
+      font-size: 24px;
+      margin-top: 20px;
+      color: darkblue;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="countdown"></div>
+
+  <script>
+    let output = document.getElementById("countdown");
+    let num = 10;
+
+    while (num >= 1) {
+      output.innerHTML += `<p>${num}</p>`;
+      num--;
+    }
+  </script>
+
+</body>
+</html>

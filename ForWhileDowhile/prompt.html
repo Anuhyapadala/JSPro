@@ -1,0 +1,56 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="pro"></div>
+    <script>
+        let div = document.getElementById("pro");
+        let input = prompt("Enter list items ");
+        let list = input.split(",").map(Number);
+
+        let i = 0;
+
+        while (i < list.length && list[i] < 5) {
+            div.innerHTML += `<p>${list[i]}</p>`;
+            i++;
+        }
+
+
+    </script>
+</body>
+
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Prompt 5 Times</title>
+</head>
+<body>
+  <div id="display"></div>
+
+  <script>
+    let display = document.getElementById("display");
+    let list = [];
+
+    for (let i = 0; i < 5; i++) {
+      let input = prompt(`Enter item ${i + 1}:`);
+      list.push(input);
+    }
+
+    // Display the list
+    display.innerHTML = "<h3>You entered:</h3><ul>";
+    for (let i = 0; i < list.length; i++) {
+      display.innerHTML += `<li>${list[i]}</li>`;
+    }
+    display.innerHTML += "</ul>";
+  </script>
+</body>
+</html>
+

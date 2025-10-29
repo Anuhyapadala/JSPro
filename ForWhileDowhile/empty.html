@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cart Check</title>
+</head>
+<body>
+  <div id="cart"></div>
+
+  <script>
+    let cart = [];
+    let display = document.getElementById("cart");
+
+    let i = 0;
+    do {
+      display.innerHTML = "<p>Cart is empty</p>";
+      i++;
+    } while (cart.length > 0);
+  </script>
+</body>
+</html>

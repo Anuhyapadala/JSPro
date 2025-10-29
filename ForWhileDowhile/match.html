@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="match"></div>
+    <script>
+        let div = document.getElementById("match");
+        let products = ["iphone", "galaxy", "samsung", "camera", "watch",]
+        for (i = 0; i < products.length; i++) {
+            if (products[i] =="camera") {
+                div.innerHTML += `<p>found:${products[i]}</p>`;
+                break;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

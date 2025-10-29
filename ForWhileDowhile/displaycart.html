@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>order summary</title>
+    <style>
+        table {
+            width: 300px;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #333;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table id="table">
+        <tr>
+
+            <th>product</th>
+            <th>quantity</th>
+            <th>price</th>
+        </tr>
+    </table>
+    <div id="msg"></div>
+    <script>
+        let tables = document.getElementById("table");
+        let message = document.getElementById("msg")
+        let array = [{ product: "watch", quantity: 3, price: 3000 },
+        { product: "vivo", quantity: 2, price: 45000 },
+        { product: "iphone", quantity: 1, price: 10000 },
+        { product: "samsung", quantity: 3, price: 15000 },]
+        let totalquantity = 0
+        let cartvalue = 0
+        for (i = 0; i < array.length; i++) {
+            totalquantity += array[i].quantity;
+            cartvalue = array[i].quantity * array[i].price;
+
+            tables.innerHTML += `<tr>
+                <td>${array[i].product}</td>
+                <td>${array[i].quantity}</td>
+                <td>${array[i].price}</td></tr>`
+
+        }
+        message.innerHTML = `<p>total quantity:
+            ${totalquantity}</p><p>cart value:${cartvalue}</p>`
+        if (cartvalue > 5000) {
+            document.write("free delivery")
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>order summary</title>
+    <style>
+        table {
+            width: 300px;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #333;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="table">
+        <tr>
+
+            <th>product</th>
+            <th>price</th>
+            <th>GST</th>
+            <th>final price</th>
+        </tr>
+    </table>
+    <script>
+        let tables = document.getElementById("table");
+        let array = [{ product: "watch", price: 3000, },
+        { product: "vivo", price: 45000 },
+        { product: "iphone", price: 100000 },
+        { product: "samsung", price: 15000 },]
+        for (i = 0; i < array.length; i++) {
+            let gst = array[i].price * 0.18;
+            let finalprice = array[i].price + gst;
+            tables.innerHTML += `<tr>
+                <td>${array[i].product}</td>
+                <td>${array[i].price}</td>
+                <td>${gst}</td>
+                <td>${finalprice}</td></tr>`
+        }
+
+    </script>
+
+</body>
+
+</html>
