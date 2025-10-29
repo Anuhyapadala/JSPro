@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 300px 300px;
+            grid-template-rows: 100px 300px 100px;
+
+            text-align: center;
+            border: 1px solid #aaa;
+
+
+
+        }
+
+        .container div {
+            border: 1px solid #aaa;
+            padding: 20px;
+        }
+
+        .cell1 {
+            grid-column-start: 1;
+            grid-column-end: 3;
+
+        }
+
+
+        .cell5 {
+            grid-column-start: 1;
+            grid-column-end: 3;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="cell1">header</div>
+        <div class="cell2">side</div>
+
+        <div class="cell4">content</div>
+        <div class="cell5">footer</div>
+    </div>
+</body>
+
+</html>
