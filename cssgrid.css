@@ -1,0 +1,26 @@
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  gap: 20px;
+  padding: 30px;
+  background-color: #f0f0f0;
+  text-align: center;
+}
+
+.title {
+  grid-column: 1 / 4;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.desc {
+  grid-column: 1 / 4;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.icon {
+  font-size: 2rem;
+  color: #444;
+}

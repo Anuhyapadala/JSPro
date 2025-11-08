@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid {
+            display: grid;
+            grid-template-columns: 2fr 2fr 2fr ;
+            /* 3 columns */
+            grid-template-rows: auto auto;
+            /* 2 rows */
+            gap: 10px;
+            text-align: center;
+            border: 1px solid  #aaa
+        }
+
+        .grid div {
+            background: #ddd;
+            padding: 20px;
+            font-weight: bold;
+            border: 1px solid #aaa;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="grid">
+        <div>Cell 1</div>
+        <div>Cell 2</div>
+        <div>Cell 3</div>
+        <div>Cell 4</div>
+        <div>Cell 5</div>
+        <div>Cell 6</div>
+        <div>Cell 4</div>
+        <div>Cell 5</div>
+        <div>Cell 6</div>
+    </div>
+</body>
+
+</html>
