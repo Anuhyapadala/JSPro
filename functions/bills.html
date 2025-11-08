@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Hotel NAME</h1>
+    <h2 id="name"></h2>
+    <button onclick="bill()">generate bill</button>
+    <table id="table">
+        <tr>
+            <th>itemname</th>
+            <th>price</th>
+            <th>quantity</th>
+            <th>amount</th>
+        </tr>
+    </table>
+    <div id="amounts"></div>
+
+    <script>
+        let totalamount=0;
+        function hotel(username = "guest") {
+            let heading = document.getElementById("name");
+            heading.innerText = "Welcome Mr. " + username;
+        }
+
+        let name = prompt("Enter your name:");
+        hotel(name);
+        let d = document.getElementById("table");
+        function bill() {
+
+            array = [{ itemname: "chicken wings", price: 500 }, { itemname: "biryani", price: 400 }, { itemname: "icecream", price: 250 }];
+            for (i = 0; i < array.length; i++) {
+                var quantity = parseInt(prompt(`Enter quantity for ${array[i].itemname}:`));
+                var amount = array[i].price * quantity;
+                totalamount += amount;
+
+                d.innerHTML += `<tr>
+                <td>${array[i].itemname}</td>
+                <td>${array[i].price}</td>
+                <td>${quantity}</td>
+                <td>${amount}</td> </tr>`
+            }
+            let a=document.getElementById("amounts")
+            var tax = 0.05;
+            var payableamount = totalamount + (totalamount * tax);
+            a.innerHTML=`<p>total amount:${totalamount}</p>
+            <p>payableamount:${payableamount}</p>`
+            
+        }
+
+
+
+        // var tax = 0.05;
+        // var payableamount = amount + (amount * tax);
+        // console.log(payableamount);
+
+
+    </script>
+
+</body>
+
+</html>
