@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            color: #222;
+            text-align: center;
+            padding-top: 100px;
+
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .time {
+            font-size: 2em;
+            background: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .container {
+            background-color: #e0f7fa;
+            /* light blue "hie" tone */
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+        }
+    </style>
+
+</head>
+
+<body>
+    <section class="container">
+        <h1>🔥 Limited-Time Offer!</h1>
+        <p>Hurry up! This deal ends soon:</p>
+        <div id="time"></div>
+    </section>
+    <script>
+        let endDate = new Date()
+        console.log(endDate);
+        endDate.setDate(9);
+        console.log(endDate);
+        function updatetime() {
+            let now = new Date();
+            let diff = endDate - now;
+            console.log(diff);
+            let day = Math.floor(diff / (1000 * 60 * 60 * 24));
+            console.log(day);
+            let hour = Math.floor(diff % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
+            console.log(hour);
+            let mint = Math.floor(diff % (1000 * 60 * 60) / (1000 * 60));
+            console.log(mint);
+            let sec = Math.floor(diff % (1000 * 60) / 1000);
+            console.log(sec)
+            document.getElementById("time").innerText =
+                `${Math.floor(day)}d ${Math.floor(hour)}h ${Math.floor(mint)}m ${Math.floor(sec)}s`;
+        }
+        setInterval(updatetime, 1000);
+        // updatetime();
+
+
+    </script>
+</body>
+
+</html>
