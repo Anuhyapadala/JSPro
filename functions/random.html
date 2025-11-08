@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="randommatch()">click here</button>
+    <div id="match"></div>
+    <script>
+        function randommatch() {
+            let doc = document.getElementById("match")
+            let r = Math.floor(Math.random() * 9) + 1;
+            let p = parseInt(prompt("enter number"));
+            if (r === p) {
+                doc.textContent = ` Matched! random number was ${r} and you entered ${p}`;
+
+            }
+            else {
+                doc.textContent = ` Not matched.random number was ${r} and you entered ${p}`;
+            }
+
+
+
+        }
+    </script>
+</body>
+
+</html>
