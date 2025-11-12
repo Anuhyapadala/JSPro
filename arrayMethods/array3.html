@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="dis"></div>
+    <button onclick="oldest()">remove oldest</button>
+    <script>
+        p = document.getElementById("dis");
+        // function oldest() {
+        let notifications = ["Welcome!", "New Offer!", "Your Order is Shipped!"];
+        //     p.innerHTML += `<p>${notifications}</p>`
+        //     notifications.shift();
+        //     p.innerHTML += `<p>${notifications}</p>`
+        // }
+        function display() {
+            p.innerHTML = ""; // Clear previous content
+            for (let i = 0; i < notifications.length; i++) {
+                p.innerHTML += `<p>${notifications[i]}</p>`;
+            }
+        }
+
+        function oldest() {
+            if (notifications.length > 0) {
+                notifications.shift(); // Remove first item
+                display(); // Update display
+            }
+        }
+
+        // Initial display
+        display();
+
+    </script>
+</body>
+
+</html>

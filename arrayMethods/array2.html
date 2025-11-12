@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button onclick="items()">Add to Cart</button>
+    <button onclick="remove()">remove last</button>
+    <div id="items"></div>
+    <div id="remov"></div>
+
+    <script>
+        let cart = [];
+        d = document.getElementById("items")
+        d1 = document.getElementById("remov")
+        function items() {
+
+            let pro = prompt("enter products");
+            let products = pro.split(",");
+            for (i = 0; i < products.length; i++) {
+                cart.push(products[i]);
+            }
+            d.innerHTML += `<p>cart:${cart.join(",")}</p>`
+        }
+        
+        function remove() { 
+        d.innerHTML += `<p>before:${cart}</p>`
+        cart.pop()
+        d1.innerHTML += `<p>after:${cart}</p>`
+            
+        }
+
+
+    </script>
+</body>
+
+</html>

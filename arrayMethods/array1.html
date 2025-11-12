@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button onclick="items()">Add to Cart</button>
+    <div id="items"></div>
+    <script>
+        let cart = [];
+        d = document.getElementById("items")
+        function items() {
+
+            let pro = prompt("enter products");
+            let products = pro.split(",");
+            for (i = 0; i < products.length; i++) {
+                cart.push(products[i]);
+            }
+            d.innerHTML += `<p>cart:${cart.join(",")}</p>`
+        }
+
+
+    </script>
+</body>
+
+</html>
