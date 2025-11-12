@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="word"></div>
+    <script>
+        let str = "Lorem ipsum react dolor sit react amet, consectetur react adipiscing elit.";
+        let s=str.split('  ')
+        // let search = prompt("enter search word");
+        let w = document.getElementById("word");
+        for (i = 0; i < s.length; i++) {
+            str = str.replaceAll("react", "<mark>react</mark>");
+            w.innerHTML += `<p>${str}</p>`
+
+        }
+    </script>
+</body>
+
+</html>
